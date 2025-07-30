@@ -1,0 +1,20 @@
+services:
+
+  escreve:
+    image: alex_docker:latest
+    volumes:
+      - aqui:/teste
+    command: python escreve.py
+  apaga:
+    image: alex_docker:latest
+    volumes:
+      - aqui:/teste
+    command: python apaga.py
+
+volumes:
+  aqui:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/alcsc/Desktop/meu_projeto
+      o: bind
