@@ -2,6 +2,7 @@ FROM  ubuntu:22.04
 
 RUN apt update
 
+
 RUN apt install -y pkg-config
 RUN apt install -y build-essential 
 RUN apt install -y zlib1g-dev 
